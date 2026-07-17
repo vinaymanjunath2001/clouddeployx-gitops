@@ -1,0 +1,48 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+
+namespace: boutique-dev
+
+images:
+  - name: frontend
+    newName: 490939613896.dkr.ecr.ap-south-1.amazonaws.com/clouddeployx/frontend
+    newTag: "1"
+
+  - name: cartservice
+    newName: 490939613896.dkr.ecr.ap-south-1.amazonaws.com/clouddeployx/cartservice
+    newTag: "1"
+
+  - name: checkoutservice
+    newName: 490939613896.dkr.ecr.ap-south-1.amazonaws.com/clouddeployx/checkoutservice
+    newTag: "1"
+
+  - name: currencyservice
+    newName: 490939613896.dkr.ecr.ap-south-1.amazonaws.com/clouddeployx/currencyservice
+    newTag: "1"
+
+  - name: emailservice
+    newName: 490939613896.dkr.ecr.ap-south-1.amazonaws.com/clouddeployx/emailservice
+    newTag: "1"
+
+  - name: paymentservice
+    newName: 490939613896.dkr.ecr.ap-south-1.amazonaws.com/clouddeployx/paymentservice
+    newTag: "1"
+
+  - name: productcatalogservice
+    newName: 490939613896.dkr.ecr.ap-south-1.amazonaws.com/clouddeployx/productcatalogservice
+    newTag: "1"
+
+  - name: recommendationservice
+    newName: 490939613896.dkr.ecr.ap-south-1.amazonaws.com/clouddeployx/recommendationservice
+    newTag: "1"
+
+  - name: shippingservice
+    newName: 490939613896.dkr.ecr.ap-south-1.amazonaws.com/clouddeployx/shippingservice
+    newTag: "1"
+
+  - name: adservice
+    newName: 490939613896.dkr.ecr.ap-south-1.amazonaws.com/clouddeployx/adservice
+    newTag: "1"

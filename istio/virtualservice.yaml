@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+
+metadata:
+  name: boutique
+
+spec:
+  hosts:
+  - "*"
+
+  gateways:
+  - boutique-gateway
+
+  http:
+  - route:
+    - destination:
+        host: frontend
+        port:
+          number: 80
